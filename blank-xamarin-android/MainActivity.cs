@@ -8,15 +8,28 @@ namespace fhxamarinandroidblank
 	[Activity (Label = "fh-xamarin-android-blank", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+		
 
-		protected async override void OnCreate (Bundle savedInstanceState)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-			SetContentView (Resource.Layout.Main);
+			// Set our view from the "main" layout resource
+			//SetContentView (Resource.Layout.Main);
 
-			await FHClient.Init();
+			var initTask = FHClient.Init();
+			initTask.ContinueWith(task =>
+				{RunOnUiThread(()=>{
+					if (!task.IsFaulted)
+					{
+						Toast.MakeText(this, "Init complete", ToastLength.Long).Show();
+					}
+					else 
+					{
+						Toast.MakeText(this, "Init failed " + task.Exception, ToastLength.Long).Show();
+					}
+				});
 
+			});
 		}
 	}
 }

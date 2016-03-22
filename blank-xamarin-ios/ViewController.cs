@@ -11,22 +11,22 @@ namespace blank_xamarin_ios
 		{
 		}
 
-		public async override void ViewDidLoad ()
+		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
-			try 
+			var initTask = FHClient.Init();
+			initTask.ContinueWith(task => 
 			{
-				var initTask = await FHClient.Init();
-				if (!initTask)
+				if (!task.IsFaulted)
 				{
 					StatusLabel.Text = "FH init successful";
 				}
-			}
-			catch(Exception e)
-			{
-				StatusLabel.Text = "FH init in error";
-				Console.WriteLine("Error {0}", e);
+				else 
+				{
+					StatusLabel.Text = "FH init in error";
+					Console.WriteLine("Error {0}", e);
+				}
 			}
 		}
 	}

@@ -25,9 +25,9 @@ namespace blank_xamarin_ios
 				else 
 				{
 					StatusLabel.Text = "FH init in error";
-					Console.WriteLine("Error {0}", e);
+					Console.WriteLine("Error {0}", task.Exception);
 				}
-			}
+			});
 		}
 	}
 }

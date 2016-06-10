@@ -18,7 +18,7 @@ namespace blank_xamarin_ios
 			try 
 			{
 				var initTask = await FHClient.Init();
-				if (!initTask)
+				if (initTask)
 				{
 					StatusLabel.Text = "FH init successful";
 				}

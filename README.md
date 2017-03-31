@@ -11,7 +11,7 @@ Prerequisites: fh-android-sdk : 3.0.+, Xamarin Studio, Android SDK : 22+ or newe
 
 ## What is it?
 
-This application provides a starting point for developing RHMAP applications.  The FeedHenry SDK is initialized for Android in [MainActivity.cs](blank-xamarin-android/MainActivity.cs). The app uses [fh-dotnet-sdk](https://github.com/feedhenry/fh-dotnet-sdk).
+This application provides a starting point for developing RHMAP applications.  The FeedHenry SDK is initialized for Android in `blank-xamarin-android/MainActivity.cs`. The app uses [fh-dotnet-sdk](https://github.com/feedhenry/fh-dotnet-sdk).
 
 If you do not have access to a RHMAP instance, you can sign up for a free instance at [https://openshift.feedhenry.com/](https://openshift.feedhenry.com/).
 
@@ -32,10 +32,10 @@ If you wish to contribute to this template, the following information may be hel
 ## Build instructions
 ### Android
  * Open the project in Xamarin Studio
- * Edit [fhconfig.properties](blank-xamarin-android/Assets/fhconfig.properties) to include the relevant information from RHMAP.
+ * Edit `blank-xamarin-android/Assets/fhconfig.properties` to include the relevant information from RHMAP.
  * Attach running Android Device with API 16+ running
  * Right click on "blank-xamarin-android" and select "Run Item"
 
 #### Initialization
 
-The FeedHenry SDK is initialized here in : [MainActivity.cs](blank-xamarin-android/MainActivity.cs#L18).
+The FeedHenry SDK is initialized in `blank-xamarin-android/MainActivity.cs`.

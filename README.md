@@ -1,6 +1,6 @@
 # blank-xamarin
 
-[![AppVeyor](https://img.shields.io/appveyor/ci/feedhenry-templates/blank-xamarin/master.svg)](https://ci.appveyor.com/project/feedhenry/blank-xamarin/) 
+[![AppVeyor](https://img.shields.io/appveyor/ci/feedhenry/blank-xamarin/master.svg)](https://ci.appveyor.com/project/feedhenry/blank-xamarin/) 
 
 Author: Summers Pittman (supittma@redhat.com)   
 Level: Beginner   
